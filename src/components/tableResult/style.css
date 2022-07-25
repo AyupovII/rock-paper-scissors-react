@@ -1,0 +1,13 @@
+.table{
+  font-size: 1.5rem;
+  display: flex;
+}
+.table-result{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  min-width: 3em;
+}
+.table-result__round{
+  background-color: aquamarine;
+}
