@@ -2,6 +2,10 @@
   font-size: 1.3rem;
 }
 .round{
-  font-size: 1.2em;
+  font-size: 8rem;
   font-weight: 600;
+}
+.round-text{
+  font-weight: 600;
+  font-size: 3rem;
 }

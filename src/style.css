@@ -29,7 +29,7 @@ img {
 }
 .play-ground {
   display: grid;
-  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 30px;
 }
 .app-result{
@@ -60,4 +60,7 @@ img {
   width: 7.9em;
   align-items: center;
   justify-content: space-around
+}
+.message{
+  font-size: 3rem;
 }

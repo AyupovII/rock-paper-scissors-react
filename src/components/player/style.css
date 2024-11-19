@@ -10,4 +10,10 @@
 }
 .player-not-select{
   height: 64px;
+  font-size: 4rem;
+}
+.player-zone-ii{
+  border-radius: 12px;
+  background-color: rgba(190, 175, 175, 0.356);
+  pointer-events: none;
 }
