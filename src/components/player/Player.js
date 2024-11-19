@@ -12,7 +12,6 @@ export const Player = ({ iconSelect = "", score = 0, onClick, auto = false, name
     if (iconSelect === "Paper") setIcon(paper);
     if (iconSelect === "Scissors") setIcon(scissors);
   }, [iconSelect]);
-  console.log(parseInt(name))
   return (
     <div className={`player-zone ${auto ? "player-zone-ii" : ""}`}>
       <div>

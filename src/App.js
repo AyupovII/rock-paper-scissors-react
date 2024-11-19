@@ -34,7 +34,6 @@ function App() {
   const pickPlayer = (e, player) => {
     if (state[player] !== "") return
     const pickElement = e.target.parentNode.getAttribute("value");
-    console.log(pickElement)
     setState({ ...state, [player]: pickElement })
   }
 
@@ -58,7 +57,6 @@ function App() {
     restart();
   }
   const handler = (e) => {
-    console.log(e)
     const targetHistory = history.slice(0, e + 1);
     setPlay(false);
     setState(history[e]);
@@ -100,7 +98,6 @@ function App() {
 
   //   }
   // }, [state.playerSelect, state.computerSelect])
-  console.log(state)
   return (
     <div className="App">
       <Title round={state.round} />
