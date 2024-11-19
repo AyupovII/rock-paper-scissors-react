@@ -28,7 +28,7 @@ function App() {
       message: "VS",
     });
     setHistory([]);
-    setAuto(false);
+    setAuto(true);
     setDisableCheckbox(false);
   }
   const pickPlayer = (e, player) => {
@@ -66,18 +66,20 @@ function App() {
     if (state.computerSelect && state.playerSelect && play) {
       if (state.computerSelect === state.playerSelect) { setState({ ...state, message: "Ничья" }) }
       else {
-        ((state.computerSelect === "Rock" && state.playerSelect === "Scissors") ||
+        if ((state.computerSelect === "Rock" && state.playerSelect === "Scissors") ||
           (state.computerSelect === "Paper" && state.playerSelect === "Rock") ||
-          (state.computerSelect === "Scissors" && state.playerSelect === "Paper")) ?
+          (state.computerSelect === "Scissors" && state.playerSelect === "Paper")) {
+
           setState({
             ...(state.message = auto ? "Победил компьютер" : "Победил игрок 2"),
             ...(state.computerScore = state.computerScore + 1)
 
-          }) :
-          setState({
-            ...(state.message = "Победил игрок 1"),
-            ...(state.playerScore = state.playerScore + 1)
-          });
+          })
+        }
+        else setState({
+          ...(state.message = "Победил игрок 1"),
+          ...(state.playerScore = state.playerScore + 1)
+        });
         setState({ ...state })
       }
     }
